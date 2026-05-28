@@ -1,6 +1,6 @@
 import StatCard from "../components/StatCard"
 import ActivityItem from "../components/ActivityItem"
-import {statsData, recentActivities} from "../constant/dashboardData"
+import {statsData, recentActivities} from "../constants/dashboardData"
 
 const Dashboard = () => {
 

@@ -1,41 +1,24 @@
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { sidebarLinks } from "../constants/sidebarData"
 
 const Sidebar = () => {
     return (
-        <div className="flex flex-col p-4 h-screen w-64 border bg-zinc-900 text-white border-r border-zinc-800">
+        <div className="flex flex-col items-center justify-between p-4 md:h-screen w-full md:w-64 border bg-zinc-900 text-white border-r border-zinc-800">
             <div className="font-bold text-lg mb-8 pb-4 border-b border-zinc-800 ">Nova<span className="italic text-blue-500 ">Desk</span></div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-row md:flex-col gap-3 justify-between">
 
-                <NavLink 
-                to="/"
-                className={({isActive}) => 
-                    isActive
-                    ? "px-4 py-3 rounded-lg bg-zinc-800 text-white"
-                    : "px-4 py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer"
-                }
-                >Dashboard
-                </NavLink>
+                {sidebarLinks.map((data) => (
+                    <NavLink
+                        to={data.path}
+                        key={data.path}
+                        className={({ isActive }) =>
+                            isActive
+                                ? "px-3 py-2 md:px-4 md:py-3 rounded-lg bg-zinc-800 text-white"
+                                : "px-3 py-2 md:px-4 md:py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer"
+                        }
+                    >{data.name}</NavLink>
+                ))} 
 
-                <NavLink 
-                to="/Workspace"
-                className={({isActive}) => 
-                    isActive
-                    ? "px-4 py-3 rounded-lg bg-zinc-800 text-white"
-                    : "px-4 py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer"
-                }
-                >Workspace
-                </NavLink>
-
-                <NavLink 
-                to="/Settings"
-                className={({isActive}) => 
-                    isActive
-                    ? "px-4 py-3 rounded-lg bg-zinc-800 text-white"
-                    : "px-4 py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer"
-                }
-                >Settings
-                </NavLink>
-                
             </div>
 
         </div>
