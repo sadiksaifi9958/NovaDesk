@@ -1,25 +1,31 @@
-const Dashboard = () => {
-    return <div className="p-6 space-y-6">
-        <div className="grid grid-cols-3 gap-4">
+import StatCard from "../components/StatCard"
+import ActivityItem from "../components/ActivityItem"
+import {statsData, recentActivities} from "../constant/dashboardData"
 
-            {[
-            {title: "Total Projects", content: 24},
-            {title: "Active Tasks", content: 5},
-            {title: "Team Members", content: 14}
-            ].map(
+const Dashboard = () => {
+
+    return <div className="p-6 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            {statsData.map(
                 (e) => (
-                <div className="bg-white rounded-xl p-5 border shadow-sm">
-                    <div className="text-sm text-zinc-500">e.title</div>
-                    <div className="text-3xl font-bold mt-2">e.content</div>
-                </div>
+                    <StatCard
+                        key={e.title}
+                        title={e.title}
+                        content={e.content} />
                 ))}
 
         </div>
 
         <div className="bg-white rounded-xl p-5 border shadow-sm">Recent Activity
-            <div className="flex items-center justify-between py-3 border-b">John created new tasks</div>
-            <div className="flex items-center justify-between py-3 border-b">Team meeting scheduled</div>
-            <div className="flex items-center justify-between py-3 border-b">Project updated</div>
+
+            {recentActivities.map((activity) => (
+                <ActivityItem
+                    key={activity}
+                    activity={activity} />
+            ))
+            }
+
         </div>
     </div>
 }
