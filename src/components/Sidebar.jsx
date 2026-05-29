@@ -4,7 +4,7 @@ import { sidebarLinks } from "../constants/sidebarData"
 const Sidebar = () => {
     return (
         <div className="flex flex-col p-4 md:h-screen w-full md:w-64 border bg-zinc-900 text-white border-r border-zinc-800">
-            <div className="font-bold text-lg mb-8 pb-4 border-b border-zinc-800 ">Nova<span className="italic text-blue-500 ">Desk</span></div>
+            <div className="font-bold text-lg mb-8 h-12 border-b border-zinc-800">Nova<span className="italic text-blue-500 ">Desk</span></div>
             <div className="flex flex-row md:flex-col gap-3 mt-8">
 
                 {sidebarLinks.map((data) => (

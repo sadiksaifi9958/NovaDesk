@@ -5,11 +5,13 @@ import { Outlet } from "react-router-dom"
 
 const DashboardLayout = () => {
     return (
-        <div className="flex flex-col md:flex-row h-screen bg-zinc-100">
+        <div className="flex flex-col md:flex-row h-screen overflow-hidden">
             <Sidebar />
-            <div className="flex flex-col flex-1 min-h-screen">
+            <div className="flex flex-col flex-1 bg-[#f5f7fb] overflow-hidden">
                 <Navbar />
-                <Outlet />
+                <div className="flex-1 overflow-y-auto">
+                    <Outlet />
+                </div>
             </div>
         </div>
     )
