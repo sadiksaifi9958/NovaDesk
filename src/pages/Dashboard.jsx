@@ -5,6 +5,11 @@ import {statsData, recentActivities} from "../constants/dashboardData"
 const Dashboard = () => {
 
     return <div className="p-6 space-y-6">
+
+        <div className="p-6 bg-white rounded-xl mb-8">
+            <h1>Welcome back, Sadik 👋</h1>
+            <h6>Here’s your workspace overview for today</h6>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
             {statsData.map(

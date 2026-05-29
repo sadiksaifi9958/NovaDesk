@@ -10,14 +10,16 @@ const Sidebar = () => {
                 {sidebarLinks.map((data) => (
                     <NavLink
                         to={data.path}
-                        key={data.path} 
+                        key={data.path}
                         className={({ isActive }) =>
                             isActive
-                                ? "px-3 py-2 md:px-4 md:py-3 rounded-lg bg-zinc-800 text-white"
-                                : "px-3 py-2 md:px-4 md:py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer"
+                                ? "px-3 py-2 md:px-4 md:py-3 rounded-lg bg-zinc-800 text-white flex items-center gap-2"
+                                : "px-3 py-2 md:px-4 md:py-3 rounded-lg hover:bg-zinc-800 transition-all duration-200 cursor-pointer flex items-center gap-2"
                         }
-                    >{data.name}</NavLink>
-                ))} 
+                    >{data.icon}
+                    <span>{data.name}</span>
+                    </NavLink>
+                ))}
 
             </div>
 
