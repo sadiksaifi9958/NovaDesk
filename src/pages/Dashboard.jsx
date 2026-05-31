@@ -1,6 +1,7 @@
 import StatCard from "../components/StatCard"
 import ActivityItem from "../components/ActivityItem"
-import { statsData, recentActivities } from "../constants/dashboardData"
+import ProjectTable from "../components/ProjectTable"
+import { statsData, recentActivities, ProjectTableData } from "../constants/dashboardData"
 
 const Dashboard = () => {
 
@@ -37,11 +38,24 @@ const Dashboard = () => {
                 <div className="space-y-5">
                     {recentActivities.map((activity) => (
                         <ActivityItem
-                            key={activity}
+                            key={activity.title}
                             activity={activity}
                         />
                     ))}
                 </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 shadow-sm border border-zinc-100">
+                <h1 className="text-xl font-semibold text-zinc-600 mb-6">Projects Overview</h1>
+                {
+                    ProjectTableData.map((table) => (
+                            <ProjectTable
+                            key={table.name}
+                            table={table}
+                            />
+                        )
+                    )
+                }
             </div>
 
         </div>

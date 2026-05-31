@@ -15,3 +15,36 @@ export const recentActivities = [
     {title: "Team meeting scheduled", time: "5h ago"},
     {title: "Project updated", time: "1d ago"},
 ]
+
+export const ProjectTableData = [
+    {
+        name: "Project",
+        status: "Status",
+        team: "Team",
+        dueTime: "Due Time"
+    },
+    {
+        name: "Project 1",
+        status: "Active",
+        team: "SS, AK, RJ",
+        dueTime: "20 June"
+    },
+    {
+        name: "Project 2",
+        status: "Active",
+        team: "SM, PS, MD",
+        dueTime: "31 May"
+    },
+    {
+        name: "Project 3",
+        status: "Completed",
+        team: "SP, AG, VK",
+        dueTime: "20 June"
+    },
+    {
+        name: "Project 4",
+        status: "Pending",
+        team: "SH, MS, PS",
+        dueTime: "02 AUG"
+    }
+];
