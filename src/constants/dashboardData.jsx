@@ -21,30 +21,35 @@ export const ProjectTableData = [
         name: "Project",
         status: "Status",
         team: "Team",
-        dueTime: "Due Time"
+        dueTime: "Due Time",
+        priority: "Priority"
     },
     {
         name: "Project 1",
         status: "Active",
         team: "SS, AK, RJ",
-        dueTime: "20 June"
+        dueTime: "20 June",
+        priority: "Secondary"
     },
     {
         name: "Project 2",
         status: "Active",
         team: "SM, PS, MD",
-        dueTime: "31 May"
+        dueTime: "31 May",
+        priority: "Primary"
     },
     {
         name: "Project 3",
         status: "Completed",
         team: "SP, AG, VK",
-        dueTime: "20 June"
+        dueTime: "20 May",
+        priority: "Tertiary"
     },
     {
         name: "Project 4",
         status: "Pending",
         team: "SH, MS, PS",
-        dueTime: "02 AUG"
+        dueTime: "02 AUG",
+        priority: "Tertiary"
     }
 ];

@@ -1,4 +1,4 @@
-import {FiSearch} from "react-icons/fi"
+import {FiSearch} from "react-icons/fi" 
 
 const Navbar = () => {
     return (
